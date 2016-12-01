@@ -1,8 +1,8 @@
-%	This LaTeX file is written by Zhiyang Ong as a template for creating presentation slides.
+%	This LaTeX file is written by Zhiyang Ong for his presentation on instantaneous noise-based logic (iNBL).
 
 %	The MIT License (MIT)
 
-%	Copyright (c) <2015> <Zhiyang Ong>
+%	Copyright (c) <2016> <Zhiyang Ong>
 
 %	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -135,10 +135,10 @@
 
 
 %	First slide of the presentation
-\title[Quantum Reachability Analysis]
+\title[Instantaneous Noise-Based Logic (iNBL)]
 {\huge 
-Reachability Analysis of Quantum Markov Decision Processes}
-\subtitle{Not Using It to Verify Quantum Robots is Foolish}
+Instantaneous Noise-Based Logic}
+\subtitle{My Work in Progress}
 \author{Zhiyang Ong}
 \institute{
 	Department of Electrical and Computer Engineering \\
@@ -168,28 +168,28 @@ Reachability Analysis of Quantum Markov Decision Processes}
 
 
 
-%	Table of Contents
-\AtBeginSection[]		% Do nothing for \subsection*
-{
-	\begin{frame}
-%		\frametitle{\textcolor{yellow}{Table of Contents}}
-		\frametitle{Table of Contents}
-%		\textcolor{yellow}{\tableofcontents[currentsection]}
-		\tableofcontents[currentsection,currentsubsection]
-	\end{frame}
-}
-
-\AtBeginSubsection[]		% Do nothing for \subsection*
-{
-\begin{frame}
-\tableofcontents[currentsection,currentsubsection]
-\end{frame}
-}
-
-\section*{Outline}
-\begin{frame}
-\tableofcontents
-\end{frame}
+%	%	Table of Contents
+%	\AtBeginSection[]		% Do nothing for \subsection*
+%	{
+%		\begin{frame}
+%	%		\frametitle{\textcolor{yellow}{Table of Contents}}
+%			\frametitle{Table of Contents}
+%	%		\textcolor{yellow}{\tableofcontents[currentsection]}
+%			\tableofcontents[currentsection,currentsubsection]
+%		\end{frame}
+%	}
+%	
+%	\AtBeginSubsection[]		% Do nothing for \subsection*
+%	{
+%	\begin{frame}
+%	\tableofcontents[currentsection,currentsubsection]
+%	\end{frame}
+%	}
+%	
+%	\section*{Outline}
+%	\begin{frame}
+%	\tableofcontents
+%	\end{frame}
 
 
 
@@ -204,66 +204,63 @@ Reachability Analysis of Quantum Markov Decision Processes}
 %	Preamble
 
 %	Slide #1
-\section{Preamble}
-\begin{frame}
-	\frametitle{Acknowledgments}
-	Dott. Francesco Stefanni, University of Verona \\
-	\ \\
-	\ \\
-	\ \\
-	Dr. Prateek Tandon, who initiated the formation of this reading group on quantum robotics.
-	\ \\
-	\ \\
-	\ \\
-	Reference: Shenggang Ying and Mingsheng Ying, ``Reachability Analysis of Quantum Markov Decision Processes,'' in {\it arXiv}, Cornell University, Ithaca, NY, July 9, 2014. Available online from {\it arXiv} as Version 2 at: \url{http://arxiv.org/abs/1406.6146} and \url{http://arxiv.org/abs/1406.6146v2}; May 30, 2015 was the last accessed date.
-\end{frame}
-
-
-
-%	Slide #2
 \frame
 {
-	\frametitle{Warnings!!!}
+	\frametitle{Cheap(er), Small(er), and Fast(er)!!!}
+	\framesubtitle{Is that possible? For real???}
 
-	\begin{itemize}
-	\item Research publications on formal verification or formal methods have lots of definitions.
-	\item Exact/Approximate algorithms and heuristics for formal verification or formal methods are based on these definitions.
-	\item Hence, exact definitions of terms in formal verification or formal methods are required for proving these algorithms and heuristics and theorems.
-	\item This set of presentation slides does not cover the paper in the same order.
-	\item Some rearrangements are made to present the material as a hybrid of a brief research presentation and tutorial.
-%	\item introduce the notion of reachability analysis, from classical/traditional formal verification, before reachability analysis is introduced for formally verifying quantum systems, including quantum robots.
-	\item $\underline{\varrho}_{\kappa}$
-	\item $\overline{\varrho}_{\kappa}$
-	\item $\rho$
-	\end{itemize}
+	\begin{columns}[t]			% Contents are top vertically aligned
+		\begin{column}[T]{5cm}	% Each column can also be its own environment
+		
+		More Moore's Law, Generalized Moore's Law, More than Moore's Law \\
+		\ \\
+		Continuum Noise-Based Logic (NBL): %\vspace{-0.2cm}
+		\begin{itemize} %\itemsep -2pt
+		\item Deterministic
+		\item Reduce error accumulation \&\ propagation
+		\item More energy efficient
+		\item Greater circuit complexity
+		\end{itemize}
+%Deterministic (non-probabilistic)
+		\end{column}
+		
+		\begin{column}[T]{5cm}	% Alternative top-align that's better for graphics
+			\begin{figure}
+			\centering
+			\includegraphics[height=1.8in]{./pics/moores_law_2015}
+			%\caption{Semi-log Plot (log-lin type) of the number of transistors on a processor against time. Reference: \url{https://www.elektormagazine.com/articles/moores-law}}
+			\caption{Semi-log Plot (log-lin type) of the number of transistors on a processor against time.}
+			\end{figure}
+		\end{column}
+	\end{columns}
 }
 
-
+%	Reference: https://www.elektormagazine.com/articles/moores-law
 
 
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%	Classical Reachability Analysis
-\section{Classical Reachability Analysis}
+%	Instantaneous Noise-Based Logic (iNBL)
+\section{Instantaneous Noise-Based Logic (iNBL)}
 
 %	Slide 1
 \frame
 {
-	\frametitle{Classical Reachability Analysis}
+	\frametitle{Instantaneous Noise-Based Logic (iNBL)}
 
-	If there exists a path from vertex $s$ in a graph $G$ to vertex $t$ in $G$, $t$ is reachable from $s$. All vertices in $G$ are ``reachable from themselves'' (Yuan, 2006, \S5.2, pp. 85).
-	
+	iNBL: no time averaging operations, with the exception of the output interfaces. \\
+	\ \\
+	$\therefore$ NBL schemes without time averaging are instantaenous. \\
+	\ \\
 	\begin{itemize}
-	\item Reachability Analysis is : %\vspace{-0.3cm}
+	\item Advantages over continuum NBL: %\vspace{-0.3cm}
 		\begin{itemize} %\itemsep -2pt
-		\item Definition of reachable state in a Petri Net or FSM.
-		\item Define reachability analysis, based on the definition of the reachability of a state in a Petri Net or FSM.
-		\item E.g., A small bounded Petri Net can have many states, which are represented in the state/reachability graph. Use symmetry or stubborn set reductions, followed by creating and checking CTL formulae and predicates. Determine if a target state/marking is reachable from the initial state/marking, not necessarily via the minimal path. Check CTL properties/predicates for testing liveness properties.
-		\item Give more examples of reachability analysis
+		\item Performance (computational time complexity) speedup by 10-100 X.
+		\item Simpler, hence cheaper, circuit complexity.
 		\end{itemize}
-	\item Explain the importance of reachability analysis	
+	\item Examples of iNBL schemes: noise-based brain logic scheme, 
 	\end{itemize}
 }
 

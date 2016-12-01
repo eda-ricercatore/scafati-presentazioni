@@ -260,7 +260,11 @@ Instantaneous Noise-Based Logic}
 		\item Performance (computational time complexity) speedup by 10-100 X.
 		\item Simpler, hence cheaper, circuit complexity.
 		\end{itemize}
-	\item Examples of iNBL schemes: noise-based brain logic scheme, 
+	\item Examples of iNBL schemes:
+		\begin{itemize}
+		\item noise-based brain logic scheme
+		\item bipolar random telegraph waves
+		\end{itemize}
 	\end{itemize}
 }
 
@@ -269,26 +273,22 @@ Instantaneous Noise-Based Logic}
 %	Slide 2
 \frame
 {
-	\frametitle{Classical Reachability Analysis}
+	\frametitle{Bipolar Random Telegraph Waves (bipolar RTW)}
 
-	Reachability analysis is defined as follows:% \vspace{-0.3cm}
-	\begin{enumerate} %\itemsep -2pt
-	\item ``A fixed-point analysis'' technique to determine if a ``set of states [is] reachable from a designated set of initial states'' (Yuan, 2006, \S1.8.2., pp. 16).
-	\item 
-	\end{enumerate}
-	
-	
-	
-	\begin{itemize}
-	\item  : %\vspace{-0.3cm}
-		\begin{itemize} %\itemsep -2pt
-		\item Definition of reachable state in a Petri Net or FSM.
-		\item Define reachability analysis, based on the definition of the reachability of a state in a Petri Net or FSM.
-		\item E.g., A small bounded Petri Net can have many states, which are represented in the state/reachability graph. Use symmetry or stubborn set reductions, followed by creating and checking CTL formulae and predicates. Determine if a target state/marking is reachable from the initial state/marking, not necessarily via the minimal path. Check CTL properties/predicates for testing liveness properties.
-		\item Give more examples of reachability analysis
-		\end{itemize}
-	\item Explain the importance of reachability analysis	
-	\end{itemize}
+	Bipolar random telegraph waves (RTW) is defined by the function {\tt bipolar\_rtw(n)}. \
+	\ \\
+	\begin{gather*}
+	{\tt bipolar\_rtw(n)} =
+		\begin{cases}
+		1, & {\tt random(n)} \geq 0.5, \\
+		-1, & {\tt random(n)} < 0.5,
+		\end{cases}
+		\ \\
+	\forall n \in \{1, 2, 3, \dots\} ({\rm or\ n} \in |\mathbb{Z}| > 0)
+	\end{gather*}
+	where $n$ is the $n^{th}$ time step in a bipolar logic signal, {\tt bipolar\_rtw(n)} $\in \{1, -1\}$, that is generated from a (pseudo-) random noise generator. 
+
+
 }
 
 

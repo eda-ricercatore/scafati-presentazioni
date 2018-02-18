@@ -8,9 +8,26 @@ Presentation on quantum model checking for an online, geographically-distributed
 
 To be modified!!!
 
+See [slides on quantum model checking](https://github.com/eda-ricercatore/scafati-presentazioni/tree/master/quantico-modello-verifica).
 
+Also, see [slides on quantum model checking](https://github.com/eda-ricercatore/scafati-presentazioni/tree/master/quantico-verifica-formale).
 
 ###	Reachability Analysis
 
 See [slides on reachability analysis](https://github.com/eda-ricercatore/scafati-presentazioni/tree/master/analisi-di-raggiungibilita).
+
+
+
+###	
+
+
+
+
+
+
+
+
+
+
+
 

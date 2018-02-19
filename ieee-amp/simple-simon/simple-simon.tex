@@ -232,7 +232,9 @@ Making an Arduino Memory Game}
 	\ \\
 	``Beware of bugs in the above code. \\
 	I have only proved it correct, not tried it.'' \\
-	-- Donald E. Knuth
+	-- Donald E. Knuth \ \\
+	\ \\
+	Unlike the Fantastic and Fabulous Ms. Millie Kriel, I have yet to try out this tutorial.
 }
 
 
@@ -245,8 +247,10 @@ Making an Arduino Memory Game}
 
 	Name \\
 	\ \\
-	What are some of your favorite study techniques? \\
+	%What are some of your favorite study techniques? \\
+	What suggestions do you have for freshmen who are deciding what they can do this summer? \\
 	\ \\
+	What are some of your favorite study techniques for circuit analysis (ECEN 214) and logic design (ECEN 248)? \\
 }
 
 
@@ -256,66 +260,26 @@ Making an Arduino Memory Game}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%	Classical Reachability Analysis
-\section{Classical Reachability Analysis}
+%	Summary
+\section{Summary}
 
 %	Slide 1
 \frame
 {
-	\frametitle{Classical Reachability Analysis}
+	\frametitle{Summary}
 
-	If there exists a path from vertex $s$ in a graph $G$ to vertex $t$ in $G$, $t$ is reachable from $s$. All vertices in $G$ are ``reachable from themselves'' (Yuan, 2006, \S5.2, pp. 85).
-	
 	\begin{itemize}
-	\item Reachability Analysis is : %\vspace{-0.3cm}
+	\item Cyber-physical system design
+	\item Implement a memory game on the {\it Arduino} platform: %\vspace{-0.3cm}
 		\begin{itemize} %\itemsep -2pt
-		\item Definition of reachable state in a Petri Net or FSM.
-		\item Define reachability analysis, based on the definition of the reachability of a state in a Petri Net or FSM.
-		\item E.g., A small bounded Petri Net can have many states, which are represented in the state/reachability graph. Use symmetry or stubborn set reductions, followed by creating and checking CTL formulae and predicates. Determine if a target state/marking is reachable from the initial state/marking, not necessarily via the minimal path. Check CTL properties/predicates for testing liveness properties.
-		\item Give more examples of reachability analysis
+		\item Implement simple analog circuit design on a breadboard
+		\item Connect breadboard to the {\it Arduino} platform
+		\item Program the microcontroller on the {\it Arduino} platform
 		\end{itemize}
-	\item Explain the importance of reachability analysis	
+	\item Play the memory game
+	\item Repeat previous steps ad infinitum until you get bored.
 	\end{itemize}
 }
-
-
-
-%	Slide 2
-\frame
-{
-	\frametitle{Classical Reachability Analysis}
-
-	Reachability analysis is defined as follows:% \vspace{-0.3cm}
-	\begin{enumerate} %\itemsep -2pt
-	\item ``A fixed-point analysis'' technique to determine if a ``set of states [is] reachable from a designated set of initial states'' (Yuan, 2006, \S1.8.2., pp. 16).
-	\item 
-	\end{enumerate}
-	
-	
-	
-	\begin{itemize}
-	\item  : %\vspace{-0.3cm}
-		\begin{itemize} %\itemsep -2pt
-		\item Definition of reachable state in a Petri Net or FSM.
-		\item Define reachability analysis, based on the definition of the reachability of a state in a Petri Net or FSM.
-		\item E.g., A small bounded Petri Net can have many states, which are represented in the state/reachability graph. Use symmetry or stubborn set reductions, followed by creating and checking CTL formulae and predicates. Determine if a target state/marking is reachable from the initial state/marking, not necessarily via the minimal path. Check CTL properties/predicates for testing liveness properties.
-		\item Give more examples of reachability analysis
-		\end{itemize}
-	\item Explain the importance of reachability analysis	
-	\end{itemize}
-}
-
-
-
-%	Slide 3
-\frame
-{
-	\frametitle{References for Classical Reachability Analysis}
-
-	(Yuan, 2006) Yuan, J., Pixley, C., and Aziz, A. Constrained-Based Verification. Springer Science+Business Media, Inc., New York, NY, 2006.
-}
-
-
 
 
 
@@ -323,61 +287,160 @@ Making an Arduino Memory Game}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%	Problem Statement
-\section{Problem Statement}
+%	Required Components and Software Applications/Services
+\section{Required Components and Software Applications/Services}
 
 
-%	Slide 2
+%	Slide 1
 \frame
 {
-	\frametitle{Problem Statement}
+	\frametitle{Required Components and Software Applications/Services}
 
-	\begin{itemize} %\itemsep -2pt
-	\item Models of concurrent and nondeterministic quantum systems need to be verified.
-	\item Quantum Markov decision processes (qMDPs) can model such quantum systems.
-	\item Question: How can we carry out reachability analysis on concurrent and nondeterministic quantum systems, modeled as qMDPs?
-	\item Input: qMDP $\mathcal{M}$
-	\item Input: state space $\mathcal{H}$, which is a Hilbert space
-	\item Input: state space $B \in \mathcal{H}$
-	\item Output: Scheduler $\mathfrak{S}$
-	\item Output: Non-negative integer, $n$.
-%	\item Input: Description of system behavior
-%		\begin{itemize}
-%		\item i.e., specifications based on quantum automata
-%		\end{itemize}
-%	\item Input: Functional linear-time properties
-%		\begin{itemize}
-%		\item Linear-time invariants of quantum automata-based model
-%		\end{itemize}
-	%\item System model based on quantum automata
-	%\item System propeties (i.e., invariants): invariants of quantum automata-based model.
-	%\item Output: Boolean flag indicating correct/incorrect system behavior/functionality
-	\end{itemize}
-}
-
-
-
-
-%	Slide 3
-\frame
-{
-	\frametitle{Shortcomings of Classical Reachability Analysis}
-
-	\begin{itemize} %\itemsep -3pt
-	\item Classic Markov chains cannot capture concurrency.
-	\item A Markov chain only allows one ``choice'' of action per state, which implies that all ``rewards'' of the Markov chain are the same.
-	\item Cannot formalize behavior/functionality of quantum systems
+	\begin{itemize}
+	\item Software applications/services:
 		\begin{itemize}
-		\item Discrete state spaces of classical systems are finite or countably finite
-		\item Continuous state spaces of quantum systems cannot be addressed by discrete state spaces
-		\item State spaces of quantum systems are continuous, even for finite-dimensional quantum systems
-		\item Need to examine a finite number of representative elements  (in an orthonormal basis) of the state space of a quantum system
-		\item Or, at most, examine countably infinitely many representative elements of this state space
-		\item Always preserve the linear algebraic structure of the representative elements [\& linear-time properties]
+		\item {\it Arduino} IDE
 		\end{itemize}
-	\item Cannot formally describe temporal properties of quantum systems
-	\item The (Ying 2014) paper address quantum programs. However, the modeling of quantum programs can be extended for quantum systems, including quantum robots?
 	\end{itemize}
+
+	\begin{table}[htdp]
+\caption{Hardware components}
+\label{tab:Table}
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+		\hline
+		{\it Arduino} UNO {\rm \&}\ {\it Genuino} UNO & 1 \\
+		\hline
+		{\it SparkFun} 330 ohm resistors & 4 \\
+		\hline
+		{\it SparkFun} 10k ohm resistors & 4 \\
+		\hline
+		{\it SparkFun} Assorted LEDs & 4 \\
+		(4 LEDs of different colors) & \\
+		\hline
+		{\it SparkFun} Mini speaker & 1 \\
+		(Recommended, not required) & \\
+		\hline
+		{\it SparkFun} breadboard (Full size) & 1 \\
+		\hline
+		Jumper wires (generic) & 1 \\
+		\hline
+		\end{tabular}
+	\end{center}
+\end{table}
+
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Schematic for Hardware Implementation
+\section{Schematic for Hardware Implementation}
+
+%	Slide 1
+\frame
+{
+	\frametitle{Schematic for Hardware Implementation}
+
+\begin{figure}[h]
+\centering 
+\includegraphics[height=2.2in]{./pics/hw-implementation-simple-simon}
+\caption{Schematic for Hardware Implementation on the Breadboard}
+\label{fig:hwimplementationsimplesimon}
+\end{figure}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Source Code for Software Implementation
+\section{Source Code for Software Implementation}
+
+%	Slide 1
+\frame
+{
+	\frametitle{Source Code for Software Implementation}
+
+\begin{figure}[h]
+\centering 
+\includegraphics[height=1.80in]{./pics/sw-setup}
+\caption{Software to Set Up the Memory Game}
+\label{fig:swsetup}
+\end{figure}
+}
+
+
+
+%	Slide 2
+\frame
+{
+	\frametitle{Source Code for Software Implementation (2)}
+
+\begin{figure}[h]
+\centering 
+\includegraphics[height=1.90in]{./pics/sw-infrastructure}
+\caption{Software Infrastructure for the Memory Game (2)}
+\label{fig:swinfrastructure}
+\end{figure}
+}
+
+
+
+
+%	Slide 3
+\frame
+{
+	\frametitle{Source Code for Software Implementation (3)}
+
+\begin{figure}[h]
+\centering 
+\includegraphics[height=2.2in]{./pics/sw-infrastructure2}
+\caption{Software Infrastructure for the Memory Game (3)}
+\label{fig:swinfrastructure2}
+\end{figure}
+}
+
+
+
+
+
+
+
+%	Slide 3
+\frame
+{
+	\frametitle{Source Code for Software Implementation (4)}
+
+\begin{figure}[h]
+\centering 
+\includegraphics[height=2.2in]{./pics/sw-infrastructure3}
+\caption{Software Infrastructure for the Memory Game (4)}
+\label{fig:swinfrastructure3}
+\end{figure}
+}
+
+
+
+\frame
+{
+	\frametitle{Source Code for Software Implementation (5)}
+
+\begin{figure}[h]
+\centering 
+\includegraphics[height=2.0in]{./pics/sw-infrastructure4}
+\caption{Software Infrastructure for the Memory Game (5)}
+\label{fig:swinfrastructure4}
+\end{figure}
+}
+
+\frame
+{
+	\frametitle{Source Code for Software Implementation (6)}
+
+\begin{figure}[h]
+\centering 
+\includegraphics[height=0.7 in]{./pics/sw-infrastructure5}
+\caption{Software Infrastructure for the Memory Game (6)}
+\label{fig:swinfrastructure5}
+\end{figure}
 }
 
 
@@ -388,14 +451,16 @@ Making an Arduino Memory Game}
 
 
 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%	Prior Works
-\section{Prior and Related Works}
+%	Additional Comments
+\section{Additional Comments}
 
 %	Slide 4
 \frame
 {
-	\frametitle{Prior and Related Work}
+	\frametitle{Additional Comments}
 
 	\begin{itemize}
 	\item Almost all previous work use model checking to verify quantum communication protocols
@@ -410,8 +475,6 @@ Making an Arduino Memory Game}
 }
 
 
-Invariant subspace: sounds like T: V-->V
-something that transforms you into the same space
 
 
 
@@ -419,348 +482,6 @@ something that transforms you into the same space
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%	Design Decisions
-\section{Design Decisions}
-
-%	Slide 5
-\frame
-{
-	\frametitle{Design Decisions}
-
-	\begin{itemize}
-	\item Quantum model checking framework for the formal verification of generic quantum engineering systems
-		\begin{itemize}
-		\item Not just quantum communication systems
-		\end{itemize}
-	\item Use a formal method based on modeling quantum systems with quantum automaton
-		\begin{itemize}
-		\item Exploit similar work in quantum Markov chains, quantum dot automata, \& quantum cellular automata
-		\end{itemize}
-	\item Only consider linear-time properties of generic quantum systems
-		\begin{itemize}
-		\item Describe these linear-time properties as infinite sequences of sets of atomic propositions, just like LTL model checking
-		\end{itemize}
-	\item Extend this to verify safety properties for reversible automata
-	\item Extend this to verify $\omega$-properties for reversible B{\"{u}}chi automata
-	\item Meet requirements for correctness, safety, \&\ reliability
-	\end{itemize}
-}
-
-
-
-
-
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%	Key Contributions of Ying2014a
-\section{Key Contributions of (Ying 2014)}
-
-%	Slide 6
-\frame
-{
-	\frametitle{Key Contributions of (Ying 2014)}
-
-	\begin{itemize}
-	\item 
-	\end{itemize}
-}
-
-
-
-
-
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\section{Background Information}
-
-%\subsection{Background Information}
-%
-%\frame
-%{
-%	\frametitle{Coursework Related to Electronic Design Automation}
-%
-%	\begin{itemize}
-%	\item<1-> University of Southern California: \vspace{-0.05cm}
-%		\begin{itemize} \itemsep -1pt
-%		\item Electronic Design Automation + Digital VLSI Testing: \vspace{-0.1cm}
-%			\begin{itemize} \itemsep -1pt
-%			\item EE 680 -- Computer Aided Design of Digital Systems I
-%			\item EE 599/581 -- Mathematical Foundations for Computer Aided Design of VLSI Systems
-%			\item EE 658 -- Diagnosis and Design of Reliable Digital Systems
-%			\end{itemize}
-%		\item Digital VLSI Design: \vspace{-0.1cm}
-%			\begin{itemize} \itemsep -1pt
-%			\item EE 477L -- MOS VLSI Circuit Design
-%			\item EE 577A/B -- VLSI System Design
-%			\end{itemize}
-%		\end{itemize}
-%	\item<2-> University of Adelaide: \vspace{-0.05cm}
-%		\begin{itemize} \itemsep -1pt
-%		\item Introductory Digital VLSI Design: \vspace{-0.1cm}
-%			\begin{itemize} \itemsep -1pt
-%			\item Elec Eng 4037 -- Digital Microelectronics
-%			\item Elec Eng 3017 -- Digital Electronics
-%			\end{itemize}
-%		\item Software Engineering: \vspace{-0.1cm}
-%			\begin{itemize} \itemsep -1pt
-%			\item Comp Sci 3006 -- Software Engineering and Project
-%			\end{itemize}
-%		\item Relevant classes for my research topic: \vspace{-0.1cm}
-%			\begin{itemize} \itemsep -1pt
-%			%\item Elec Eng 4044 -- RF Engineering IV
-%			%\item Elec Eng 3021 -- Electrical Energy Systems
-%			%\item Elec Eng 4042 -- Power Electronics and Drive Systems
-%			\item Elec Eng 3015 -- Communications, Signals, \& Systems
-%			\item Elec Eng 3016 -- Control III
-%			\item Elec Eng 3018 -- RF Engineering III
-%			%\item Elec Eng 3020 -- Embedded Computer Systems
-%			\end{itemize}
-%		\end{itemize}
-%	\end{itemize}
-%}
-
-
-
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\section{Research and Project Experience}
-%
-%\subsection{Problem Description}
-%
-%\frame
-%{
-%	\frametitle{Research Background}
-%
-%	\begin{itemize}
-%	\item<1-> Literature Review: \vspace{-0.05cm}
-%		\begin{itemize} \itemsep -1pt
-%		\item Robotic Surgery + Biomedical MEMS
-%		\end{itemize}
-%	\item<2-> Honors research project / Senior thesis: \vspace{-0.05cm}
-%		\begin{itemize} \itemsep -1pt
-%		\item Complex Systems + Evolutionary Computation
-%		\end{itemize}
-%	\item<3-> Masters Research Project: \vspace{-0.05cm}
-%		\begin{itemize} \itemsep -1pt
-%		\item Automatic Test Pattern Generation at Electronic System-Level (Attempted)
-%		\item Computer System Performance Analysis (vertical profiling)
-%		\end{itemize}
-%	\end{itemize}
-%}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\section{Research and Project Experience}
-
-%\subsection{Project Experience}
-%
-%\frame
-%{
-%	\frametitle{Project Experience}
-%
-%	\begin{itemize}
-%	\item<1-> EDA Software Development: \vspace{-0.05cm}
-%		\begin{itemize} \itemsep -1pt
-%		\item ATPG for FPGA test generation system
-%		\item C++ Parser for IEEE STIL format
-%		\item Gate-level logic simulator for combinational VLSI circuits
-%		\item Software for crosstalk-aware gate sizing in VLSI circuits
-%		\end{itemize}
-%	\item<2-> Digital VLSI Design: \vspace{-0.05cm}
-%		\begin{itemize} \itemsep -1pt
-%		\item Viterbi decoder
-%		\item 32-kbit synchronous SRAM with 32-bit words
-%		\item 64-bit Ladner-Fischer tree adder
-%		\item 32-bit variable length carry-increment adder
-%		\end{itemize}
-%	\item<3-> Processor Design: \vspace{-0.05cm}
-%		\begin{itemize} \itemsep -1pt
-%		\item 4-stage pipelined Troy Wideword Processor (128-bit datapath)
-%		\item 32-bit MIPS processor (multi-cycle \& pipeline implementations)
-%		\item AMD Am2901 microprocessor
-%		\end{itemize}
-%	\end{itemize}
-%}
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Analysis on Decidability of Quantum Reachability Analysis}
-
-%%%%%%%%%%%%%%%%%%
-%\subsection{In the Finite-Horizon}
-
-%	Slide #1
-\frame
-{
-	\frametitle{Analysis on Decidability of Quantum Reachability Analysis In the Finite-Horizon}
-
-	\begin{itemize}
-	\item 
-	\end{itemize}
-}
-
-
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%
-%\subsection{In the Infinite-Horizon}
-
-%	Slide #1
-\frame
-{
-	\frametitle{Analysis on Decidability of Quantum Reachability Analysis In the Infinite-Horizon}
-
-	\begin{itemize}
-	\item 
-	\end{itemize}
-}
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Analysis on Complexity of Quantum Reachability Analysis}
-
-%%%%%%%%%%%%%%%%%%
-%\subsection{In the Finite-Horizon}
-
-%	Slide #1
-\frame
-{
-	\frametitle{Analysis on Complexity of Quantum Reachability Analysis In the Finite-Horizon}
-
-	\begin{itemize}
-	\item 
-	\end{itemize}
-}
-
-
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%
-%\subsection{In the Infinite-Horizon}
-
-%	Slide #1
-\frame
-{
-	\frametitle{Analysis on Complexity of Quantum Reachability Analysis In the Infinite-Horizon}
-
-	\begin{itemize}
-	\item 
-	\end{itemize}
-}
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Questions That I Have}
-
-%\subsection{Yet to be defined}
-
-
-%	Slide #1
-\frame
-{
-	\frametitle{Questions That I Have}
-
-	\begin{itemize}
-	\item I assume that uncomputable problems are the same as undecidable problems (Barry, Barry, and Aaronson, 2014). %Is this actually true?
-	\item From (Barry, Barry, and Aaronson, 2014), can QOMDPs be reduced to qMDPs?
-	\item The authors mentioned that quantum systems can be modeled as qMDPs? Do such quantum systems include robots, which can be modeled as quantum dynamical systems? Or, is it restricted to quantum computer programs?
-	\item What is the ortho-complement of a subspace?
-%	See page 2, left column, in the middle of the 3rd/4th paragraph that starts with the following in bold, "Contribution of the paper".
-	\item What does it mean for a measurement to be projective? What does it mean mathematically?
-%	Page 2, right column, in the 2nd/3rd paragraph. 
-	\item Is ``W'' on page 2, right column, in the last paragraph ($w \in W$), a set of words ``w''?
-	\item $\otimes$, right column, in paragraph 1/2 on page 2
-	\end{itemize}
-}
-
-do Markov chains inherently model nondeterminism?
-
-  Are there extensions of Markov chains to capture/model concurrency?
-
-
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Discussions}
-
-%\subsection{Yet to be defined}
-
-
-%	Slide #1
-\frame
-{
-	\frametitle{Discussions}
-
-	\begin{itemize}
-	\item (What do I think about this work?)
-	\item 
-	\end{itemize}
-}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Future Work}
-
-%\subsection{Yet to be defined}
-
-
-%	Slide #1
-\frame
-{
-	\frametitle{Future Work}
-
-	\begin{itemize}
-	\item Extensions of 
-	\end{itemize}
-}
 
 
 

@@ -404,7 +404,7 @@ Making an Arduino Memory Game}
 
 
 
-%	Slide 3
+%	Slide 4
 \frame
 {
 	\frametitle{Source Code for Software Implementation (4)}
@@ -418,7 +418,7 @@ Making an Arduino Memory Game}
 }
 
 
-
+%	Slide 5
 \frame
 {
 	\frametitle{Source Code for Software Implementation (5)}
@@ -431,6 +431,9 @@ Making an Arduino Memory Game}
 \end{figure}
 }
 
+
+
+%	Slide 6
 \frame
 {
 	\frametitle{Source Code for Software Implementation (6)}
@@ -454,34 +457,69 @@ Making an Arduino Memory Game}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%	Additional Comments
-\section{Additional Comments}
+%	Making and Playing the Memory Game
+\section{Making and Playing the Memory Game}
 
-%	Slide 4
+%	Slide 1
 \frame
 {
-	\frametitle{Additional Comments}
+	\frametitle{Making the Memory Game}
 
 	\begin{itemize}
-	\item Almost all previous work use model checking to verify quantum communication protocols
-	\item Use quantum process algebra to verify quantum communication systems, including quantum error correction codes
-	\item Use simulation tools for quantum systems to verify their behavior/functionality, especially their correctness and safety properties
-	\item Quantum partially observable Markov decision processes (QOMDPs), which are introduced by (Barry, Barry, and Aaronson, 2014), only care about the reachability of a single state (i.e., goal state).: %\vspace{-0.2cm}
-		\begin{itemize} \itemsep -2pt
-		\item The paper does not specifically address the reachability of invariant subspaces.
-		\item Goal-state reachability is undecidable for QOMDPs.
+	\item Implement the schematic on the breadboard
+	\item Connect breadboard to the {\it Arduino} platform
+	\item Software implementation
+		\begin{itemize}
+		\item Copy source code from \url{https://www.hackster.io/Jerepondumie/make-an-arduino-memory-game-73f55e} to your {\it Arduino} IDE.
+		\end{itemize}
+	\item Debug hardware implementation
+		\begin{itemize}
+		\item Check if all LEDs flash as expected.
+		\item During initialization of the ``Simple Simon'' game, it takes 3 seconds to show `` 5 slow flashes of all the LEDs.''
 		\end{itemize}
 	\end{itemize}
 }
 
 
 
+%	Slide 2
+\frame
+{
+	\frametitle{How to Play the Memory Game}
+
+	\begin{itemize}
+	\item Wait for the game to initialize
+		\begin{itemize}
+		\item Takes 3 seconds to show ``5 slow flashes of all the LEDs.''
+		\end{itemize}
+	\item When a LED flashes, press the corresponding button for the flashed LED.
+	\item You have 2 seconds to press each button.
+	\item For a sequence of LED flashes, press their corresponding buttons in sequence.
+	\item If all the LEDs flash rapidly, you have lost the game.
+	\item When you lose the game,
+		\begin{itemize}
+		\item The game will reset by showing ``5 slow flashes of all the LEDs.''
+		\end{itemize}
+	\end{itemize}
+}
 
 
 
+%	Slide 3
+\frame
+{
+	\frametitle{Making the Memory Game More Challenging to Play}
 
-
-
+	\begin{itemize}
+	\item Reduce the allowed reaction time for the player to press a button (for the corresponding LED that flashed).
+	\item Add additional LEDs to the circuit to increase the sequence of flashing colored LEDs; for each additional LED:
+		\begin{itemize}
+		\item Add a vertical stage in the circuit design.
+		\item Add a vertical stage on the breadboard.
+		\item Modify the array representing the input pins of the LEDs.
+		\end{itemize}
+	\end{itemize}
+}
 
 
 

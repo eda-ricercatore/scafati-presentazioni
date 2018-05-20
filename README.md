@@ -3,24 +3,77 @@ Presentations from journal clubs and reading groups for various research topics,
 	and other activities.
 
 
+
+## Quantum Formal Verification
+
+[Quantum Formal Verification](https://github.com/eda-ricercatore/scafati-presentazioni/tree/master/quantico-verifica-formale)
+
+
 ### Quantum Model Checking
 Presentation on quantum model checking for an online, geographically-distributed reading group on quantum robotics.
 
 To be modified!!!
 
-See [slides on quantum model checking](https://github.com/eda-ricercatore/scafati-presentazioni/tree/master/quantico-modello-verifica).
+See presentation slides on [Quantum Model Checking](https://github.com/eda-ricercatore/scafati-presentazioni/tree/master/quantico-modello-verifica).
 
-Also, see [slides on quantum model checking](https://github.com/eda-ricercatore/scafati-presentazioni/tree/master/quantico-verifica-formale).
 
-###	Reachability Analysis
+###	Quantum Reachability Analysis
 
-See [slides on reachability analysis](https://github.com/eda-ricercatore/scafati-presentazioni/tree/master/analisi-di-raggiungibilita).
+See presentation slides on [Quantum Reachability Analysis](https://github.com/eda-ricercatore/scafati-presentazioni/tree/master/analisi-di-raggiungibilita).
 
+
+
+
+
+
+
+##	Noise-based Logic
+
+[Noise-based Logic](https://github.com/eda-ricercatore/scafati-presentazioni/tree/master/inbl)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##	Mentoring
 
 
 ###	IEEE Aggie Mentorship Program (AMP)
 
 See [slides for presentation at the IEEE Aggie Mentorship Program (AMP)](https://github.com/eda-ricercatore/scafati-presentazioni/tree/master/ieee-amp/simple-simon)
+
+
+
+
+
+
+
+
+
+
+
+
+
+##	Hardware Security
+
+### Hack@DAC 2018 Hardware Security Contest
+
+See presentation slides on [Hack@DAC 2018 Hardware Security Contest](https://github.com/eda-ricercatore/scafati-presentazioni/tree/master/hw-sicurezza/hack-at-dac-2018)
+
+
+
+
+
+
 
 
 

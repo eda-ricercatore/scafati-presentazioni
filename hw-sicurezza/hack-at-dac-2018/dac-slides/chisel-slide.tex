@@ -143,9 +143,9 @@
 %	\item The same input is given to these different implementations.
 	\item The output of these different implementations is given to a majority gate (i.e., use majority voting).
 	\item Components that yield a different output from the majority of the components have hardware trojans.
-	\item Use proof-carrying code techniques to determine which hardware component went bad, and when and how (i.e.., sequence of input patterns) did it go bad.
+	\item Perform equivalence checking on any pair of implementations.
 	\end{itemize}
-	Reason for dropping approach: 
+	Reason for dropping approach: Not enough time to implement {\it RISC-V} processors using {\it Chisel HDL}.
 }
 
 
@@ -163,6 +163,7 @@
 %	\item The same input is given to these different implementations.
 	\item The output of these different implementations is given to a majority gate (i.e., use majority voting).
 	\item Components that yield a different output from the majority of the components have hardware trojans.
+%	\item Use proof-carrying code techniques to determine which hardware component went bad, and when and how (i.e.., sequence of input patterns) did it go bad.
 	\end{itemize}
 	Use the aforementioned software redundancy technique to determine which hardware component went bad, and when and how (i.e.., sequence of input patterns) did it go bad.
 }

@@ -138,6 +138,25 @@
 
 	Compare different implementations of a component for the {\it PULPino} system
 	\begin{itemize}
+	\item While we cannot use TLM/RTL models from others, we can create our own TLM/RTL models (using {\it Chisel HDL}) for components of the {\it PULPino} system.
+%	\item E.g., processor, ALU, or adder for the RISC-V ISA.
+%	\item The same input is given to these different implementations.
+	\item The output of these different implementations is given to a majority gate (i.e., use majority voting).
+	\item Components that yield a different output from the majority of the components have hardware trojans.
+	\item Use proof-carrying code techniques to determine which hardware component went bad, and when and how (i.e.., sequence of input patterns) did it go bad.
+	\end{itemize}
+	Reason for dropping approach: 
+}
+
+
+
+
+\frame
+{
+	\frametitle{Hardware Trojan Detection via Chisel HDL - OLD slide}
+
+	Compare different implementations of a component for the {\it PULPino} system
+	\begin{itemize}
 	\item Use techniques from fault tolerance for detecting hardware trojans. 
 	\item While we cannot use TLM/RTL models from others, we can create our own TLM/RTL models (using {\it SystemC}, {\it Verilog}, and/or {\it Chisel HDL}) for components of the {\it PULPino} system.
 %	\item E.g., processor, ALU, or adder for the RISC-V ISA.
@@ -147,11 +166,6 @@
 	\end{itemize}
 	Use the aforementioned software redundancy technique to determine which hardware component went bad, and when and how (i.e.., sequence of input patterns) did it go bad.
 }
-
-
-
-
-
 
 
 

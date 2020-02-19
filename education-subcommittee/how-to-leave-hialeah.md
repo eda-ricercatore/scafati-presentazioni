@@ -1,6 +1,6 @@
 #	How to Leave Hialeah
 
-Information about the book [Crucet2009] is provided in the *References* section.
+Information about the book [Crucet2009] is provided in the [*References* section](https://github.com/eda-ricercatore/scafati-presentazioni/blob/master/education-subcommittee/how-to-leave-hialeah.md#references).
 
 ##	Summary
 

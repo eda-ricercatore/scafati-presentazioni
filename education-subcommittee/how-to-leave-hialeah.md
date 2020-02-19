@@ -42,6 +42,16 @@ A video of Prof. Jennine Capó Crucet's reading of the title story from [Crucet2
 
 
 
+## Exploration of Cuban Cuisine in North Miami
+
++ Having tried and enjoyed food from Mexican, Afro-Latinx, Puerto Rican, Salvadoran, and Venezuelan cuisines, when I was in North Miami attending a research conference at FIU Biscayne Bay Campus, of Florida International University, I tried some Cuban food from a nearby mall.
++ Savoring fried plantains at a local mall in a predominantly Latinx/black neighborhood.
+
+
+
+
+
+
 
 
 

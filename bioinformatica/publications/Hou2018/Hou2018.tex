@@ -1,0 +1,374 @@
+%	This LaTeX file is written by Zhiyang Ong as a template for creating presentation slides.
+
+%	The MIT License (MIT)
+
+%	Copyright (c) <2015> <Zhiyang Ong>
+
+%	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+%	The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+%	Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" | awk '{ sub("23wU4X5M589","F.d_c_b. ") sub("Stanford","d0mA1n"); print $5, $2, $8; for (i=1; i<=1; i++) print "6\b"; print $9, $7, $6 }' | sed y/kqcbuHwM62z/gnotrzadqmC/ | tr 'q' ' ' | tr -d [:cntrl:] | tr -d 'ir' | tr y "\n"
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Preamble
+
+%	Acknowledgement:
+%		This is based on a template provided to me by Dott. Francesco Stefanni, from the University of Verona in January 2011.
+%
+%	Number the slides per section. This makes it easier to track the index of the slides (or number of slides) per section, as opposed to the cumulative number of slides. When I manually track the number of slides for a presentation, each time I refactor the set of slides, I would have to update the slide numbers. I want the computer to do this automatically. Hence, I shall not do this manually.
+
+
+
+%	Use the Beamer package to create the presentation slides.
+\documentclass[xcolor={usenames,dvipsnames},hyperref={hyperindex,bookmarks}]{beamer}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Import and Customize LaTeX packages.
+\usepackage{beamerthemesplit}
+
+
+%	Package for typesetting the following symbol: $\mathfrak{S}$
+%\usepackage{amssymb}
+
+%\mode<presentation>
+%{ \usetheme{boxes} }
+
+%	Select the presentation mode.
+\mode<presentation>{
+	\usetheme[logos=true,pagenumbers=true,background=true]{Esd}
+}
+\setbeamercovered{transparent}
+%\setbeamercovered{invisible}
+
+
+%	Import package to facilitate typesetting of algorithms.
+\usepackage{listings}
+
+\lstset{
+  language=C++,
+  tabsize=4,
+%  basicstyle=\ttfamily\color{black}\small,
+  basicstyle=\ttfamily\color{black},
+%  backgroundcolor=\color{lightgray},
+%  backgroundcolor=\color{white},
+  keywordstyle=\color{Purple}\bfseries,
+  identifierstyle=\color{OliveGreen},
+  commentstyle=\color{Gray}\itshape,
+  stringstyle=\color{CarnationPink},
+  showstringspaces=false,
+  showtabs=false,
+  showspaces=false
+}
+
+
+\definecolor{lightgray}{gray}{0.95}
+\font\emailtt=cmtt9
+
+%	Set up configuration for hyperlinks.
+%\usepackage[pdftex]{hyperref}	-- Option clash
+\hypersetup{
+    pdftitle={{\it PULPino} attack scenarios},     % title
+    pdfauthor={Zhiyang Ong},                 % author
+    pdfsubject={Hack@DAC 2018 Contest}, % subject of the document
+    pdfcreator={Creator},                           % creator of the document
+    pdfproducer={dvipdft},                          % producer of the document
+% Modified by Zhiyang Ong on Feb 7, 2011 to improve the way hyperlinks are colored in these presentation slides
+	pdfkeywords={LaTeX, graphics, color},
+%    pdfkeywords={C, C++, programming style},        % list of keywords
+%
+%    bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobats bookmarks
+    pdftoolbar=true,        % show Acrobats toolbar?
+    pdfmenubar=true,        % show Acrobats menu?
+    pdffitwindow=false,     % window fit to page when opened
+% Modified by Zhiyang Ong on Feb 7, 2011 to improve the way hyperlinks are colored in these presentation slides
+	pdfpagemode=UseOutlines,bookmarks, bookmarksopen,
+	pdfstartview=FitH, colorlinks, linkcolor=blue, citecolor=blue, urlcolor=red,
+%    pdfstartview={Fit},    % fits the width of the page to the window
+    pdfnewwindow=true,      % links in new window
+% Modified by Zhiyang Ong on Feb 7, 2011 to improve the way hyperlinks are colored in these presentation slides
+	colorlinks=red,        % false: boxed links; true: colored links
+	linkcolor=red,          % color of internal links
+%    colorlinks=false,        % false: boxed links; true: colored links
+%    linkcolor=red,          % color of internal links
+    citecolor=green,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=red,           % color of external links
+    pdfpagemode=FullScreen
+    %
+    %pdfpagelabels=false
+}
+
+%\usepackage[all]{hypcap}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Added by Zhiyang Ong on Feb 7, 2011 to allow figures to be places side-by-side
+%\usepackage{subfigure}
+
+
+%	First slide of the presentation
+\title[{DeepSF}]
+{\huge 
+%{DeepSF}}
+{DeepSF}: Deep CNN for mapping protein sequences to folds}
+%{DeepSF}: deep convolutional neural network for mapping protein sequences to folds}
+\subtitle{Zhiyang's presentation about \cite{Hou2018}}
+\author{Zhiyang Ong}
+\institute{
+	Department of Electrical and Computer Engineering \\
+	Dwight Look College of Engineering,\\
+	Texas A\&M University \\
+	College Station, TX
+}
+\date{\today}	% (optional)
+\subject{Subject Title}
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Do nothing in this section of the LaTeX document
+
+\begin{document}
+
+
+
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+
+%	Table of Contents
+\AtBeginSection[]		% Do nothing for \subsection*
+{
+	\begin{frame}
+%		\frametitle{\textcolor{yellow}{Table of Contents}}
+		\frametitle{Table of Contents}
+%		\textcolor{yellow}{\tableofcontents[currentsection]}
+		\tableofcontents[currentsection,currentsubsection]
+	\end{frame}
+}
+
+\AtBeginSubsection[]		% Do nothing for \subsection*
+{
+\begin{frame}
+\tableofcontents[currentsection,currentsubsection]
+\end{frame}
+}
+
+\section*{Outline}
+\begin{frame}
+\tableofcontents
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%	Slides begin HERE!!!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Problem and Knowledge Gap
+
+\section{Problem and Knowledge Gap}
+
+
+%	Slide #1
+\frame
+{
+	\frametitle{Problem Definition and Importance}
+	\framesubtitle{What is the problem that \cite{Hou2018} is solving? Why is it important?}
+
+	Describe the problem.
+	\begin{itemize}
+	\item 
+	\end{itemize}
+
+
+	Why is this problem important?
+	\begin{itemize}
+	\item 
+	\end{itemize}
+}
+
+
+
+%	Slide #2
+\frame
+{
+	\frametitle{What are the Knowledge Gaps in \cite{Hou2018}?}
+	\framesubtitle{How would \cite{Hou2018} address these knowledge gaps?}
+
+	List of knowledge gaps:
+	\begin{itemize}
+	\item 
+	\end{itemize}
+
+}
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Problem and Knowledge Gap
+
+\section{Problem and Knowledge Gap}
+
+
+%	Slide #1
+\frame
+{
+	\frametitle{Problem Definition}
+	\framesubtitle{What is the problem that \cite{Hou2018} is solving?}
+
+	Describe the problem.
+	\begin{itemize}
+	\item 
+	\end{itemize}
+
+}
+
+
+
+%	Slide #2
+\frame
+{
+	\frametitle{What are the Knowledge Gaps in \cite{Hou2018}?}
+	\framesubtitle{How would \cite{Hou2018} address these knowledge gaps?}
+
+	List of knowledge gaps:
+	\begin{itemize}
+	\item 
+	\end{itemize}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Discussion and Muddy Points
+
+\section{Discussion and Muddy Points}
+
+
+%	Slide #1
+\frame
+{
+	\frametitle{Discussion of Experimental Results}
+	\framesubtitle{What do the experimental results tell us?}
+
+	Discuss the experimental results.
+	\begin{itemize}
+	\item 
+	\end{itemize}
+
+}
+
+
+
+
+%	Slide #2
+\frame
+{
+	\frametitle{Muddy Points}
+	\framesubtitle{What do I not understand about \cite{Hou2018}?}
+
+	What do I not understand about \cite{Hou2018}?
+	\begin{itemize}
+	\item 
+	\end{itemize}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{References}
+
+\frame
+{
+	\frametitle{References}
+
+%	\begin{itemize}
+%	\item \cite{Weng2011}
+%	\end{itemize}
+%}
+
+
+	{\linespread{1}
+	%\bibliographystyle{IEEEtran}
+	\bibliographystyle{plain}
+	%\bibliography{./others/references}
+	%\bibliography{/data/others/notes/references}
+	%	/Users/zhiyang/Documents/ricerca/saag-bibtex
+	%\bibliography{/data/research/antipastobibtex/references}
+	\bibliography{/Users/zhiyang/Documents/ricerca/saag-bibtex/references}
+	%\addcontentsline{toc}{chapter}{Bibliography}
+	}
+}
+
+
+
+
+
+\end{document}
+
+
+%
+%	Trying to delay the not-uncommon path of engineering Ph.D.s who end up becoming "PowerPoint engineers"... Hopefully, slapping together a bunch of presentation slides to talk about any topic in any reasonable finite amount of time is not the most useful skill that I would learn as a grad student... Hey, at least I did it in LaTeX/Beamer!!!
+
+
+
+
+
+
+ 

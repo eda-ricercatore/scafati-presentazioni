@@ -203,6 +203,7 @@
 	\item The structures of most ($>99\%$) proteins are unknown % (pp. 1296, left column, paragraph 1)
 	\item Protein fold recognition enables us to associate a protein sequence to a protein fold
 		\begin{itemize}	% (pp. 1296, left column, paragraph 1)
+		\item Identifying protein homologs that share the same protein fold
 		\item With this protein fold, determine its protein structure $[$Tramontano2003$]$
 		\item With this protein structure, determine its protein function	%	{\Huge Insert References!!!}
 			\begin{itemize}
@@ -242,29 +243,51 @@
 %	Slide #2
 \frame
 {
-	\frametitle{Problem Definition}
+	\frametitle{Problem Definition - 1}
 	\framesubtitle{What is the problem that \cite{Hou2018} is solving?}
 
-	Problem description.
+	Problem description...
 	\begin{enumerate}
-	\item Sequence-alignment methods for mapping protein sequences to protein folds are indirect  % (abstract)
+	\item Problems with sequence-based methods, especially sequence alignment methods (including profile-sequence and profile-profile alignment methods)  % (abstract, pp. 1296, left column, 2nd paragraph)
 		\begin{itemize}
-		\item Can't explain relationship between protein sequences \& protein folds
+		\item Methods for mapping protein sequences to protein folds are indirect
+		\item Can't explain relationship between protein sequences \& protein folds, even machine learning (ML) methods
+		\item traditional ML methods also can't work for classifying data into large number of categories
+			% (pp. 1296, left column, 3rd paragraph)
+			\begin{itemize}
+			\item multi-layer perceptron
+			\item support-vector machines
+			\item ensemble classifiers
+			\item kernel-based learning
+			\end{itemize}
 		\end{itemize}
+	\item Other methods have methodological limitations % abstract
+	\end{enumerate}
+
+%Other resources:
+%+ https://socratic.org/questions/what-is-the-relationship-between-a-protein-s-structure-and-its-ability-to-functi
+}
+
+
+
+
+%	Slide #3
+\frame
+{
+	\frametitle{Problem Definition - 2}
+	\framesubtitle{What is the problem that \cite{Hou2018} is solving?}
+
+	Problem description... Continued.
+	\begin{enumerate}
 	\item Protein fold recognition enables us to associate a protein sequence to a protein fold
 		\begin{itemize}	% (pp. 1296, left column, paragraph 1)
 		\item With this protein fold, we can determine its protein structure
 		\item With this protein structure, we can determine its protein function
-			\begin{itemize}		%	{\Huge Insert References!!!}
-			\item 
-			\end{itemize}
 		\end{itemize}
 	\end{enumerate}
 
 %Other resources:
 %+ https://socratic.org/questions/what-is-the-relationship-between-a-protein-s-structure-and-its-ability-to-functi
-
-
 }
 
 
@@ -364,7 +387,8 @@
 
 	List of knowledge gaps:
 	\begin{itemize}
-	\item 
+	\item Lack of direct methods for mapping protein sequences to protein folds
+	\item Methods can't explain relationship between protein sequences \& protein folds
 	\end{itemize}
 
 }
@@ -406,7 +430,7 @@
 
 	Proposed Solution(s).
 	\begin{itemize}
-	\item 
+	\item Use 1-D deep convolutional neural network (deep CNN) 
 	\end{itemize}
 
 }
@@ -422,11 +446,26 @@
 
 	Proposed Solution(s).
 	\begin{itemize}
-	\item 
+	\item Use input feature generation and label assignment from PSI-BLAST.
+	\item Specifically, use position-specific scoring matrix
+	\item Train all mini-batches for 100 epochs
 	\end{itemize}
-
 }
 
+
+
+
+%	Slide #3
+\frame
+{
+	\frametitle{Dataset and Methods}
+	\framesubtitle{Which datasets were used?}
+
+	\begin{itemize}
+	\item SCOP 1.75 was used for training, validation, and test
+	\item SCOP 2.06 and CASP was used for test
+	\end{itemize}
+}
 
 
 
@@ -487,6 +526,24 @@
 
 
 
+%	Slide #3
+\frame
+{
+	\frametitle{Experimental Results - 3}
+	\framesubtitle{Benchmarking}
+
+	Benchmarking of results with PSI-BLAST.
+	\begin{itemize}
+	\item Solution is 12.63-26.32\% better than HHSearch on template-free modeling targets.
+	\item Solution is 3.39-17.09\% better on hard template-based modeling targets.
+	\end{itemize}
+
+}
+
+
+
+
+
 
 
 
@@ -506,7 +563,42 @@
 
 	Discuss the experimental results.
 	\begin{itemize}
-	\item 
+	\item Method is robust against: 
+		\begin{enumerate} 
+		\item sequence mutation
+		\item insertion
+		\item deletion
+		\item truncation
+		\end{enumerate}
+	\item Can solve other protein pattern recognition problems:
+		\begin{enumerate} 
+		\item protein clustering
+		\item protein comparison
+		\item protein ranking
+		\end{enumerate}
+	\end{itemize}
+
+}
+
+
+%	Slide #2
+\frame
+{
+	\frametitle{Weaknesses}
+	\framesubtitle{What are the weaknesses of this paper?}
+
+	\begin{itemize}
+	\item Poor benchmarking methodology: 
+		\begin{enumerate} 
+		\item Benchmarked solution (especially in Table 1) against PSI-BLAST (Altschul S.F. et al. , 1997)
+		\item Did not benchmark with other modern solutions for protein fold prediction
+			\begin{enumerate} 
+			\item PFPA (2015, IEEE Transactions on NanoBioscience); DOI: 10.1109/TNB.2015.2450233
+			\item random forest (2014, BMC Bioinformatics); DOI:10.1186/1471-2105-15-S11-S14
+			\item PFP-RFSM (2013, J. Biomedical Science and Engineering); DOI:10.4236/jbise.2013.612145 
+			\end{enumerate}
+		\end{enumerate}
+	\item Did not use box plots to compare methods for each protein sequence in the datasets:
 	\end{itemize}
 
 }
@@ -514,7 +606,10 @@
 
 
 
-%	Slide #2
+
+
+
+%	Slide #3
 \frame
 {
 	\frametitle{Muddy Points}
@@ -522,7 +617,7 @@
 
 	What do I not understand about \cite{Hou2018}?
 	\begin{itemize}
-	\item 
+	\item Why is it bad for top 1 predicted fold, but better for top 5 and top 10 predicted folds?
 	\end{itemize}
 
 }

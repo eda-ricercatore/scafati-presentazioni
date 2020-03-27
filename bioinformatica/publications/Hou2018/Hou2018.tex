@@ -252,7 +252,7 @@
 		\begin{itemize}
 		\item Methods for mapping protein sequences to protein folds are indirect
 		\item Can't explain relationship between protein sequences \& protein folds, even machine learning (ML) methods
-		\item traditional ML methods also can't work for classifying data into large number of categories
+		\item traditional ML methods also can't work for classifying data into large number of categories ($>1000$)
 			% (pp. 1296, left column, 3rd paragraph)
 			\begin{itemize}
 			\item multi-layer perceptron
@@ -285,6 +285,13 @@
 		\item With this protein structure, we can determine its protein function
 		\end{itemize}
 	\end{enumerate}
+	
+	Specifically... Solve the protein fold recognition problem.
+	\begin{enumerate}
+	\item Given a protein sequence, map it to a protein fold {\bf directly}
+	\item Explain relationship between protein sequences \& protein folds
+	\end{enumerate}
+	
 
 %Other resources:
 %+ https://socratic.org/questions/what-is-the-relationship-between-a-protein-s-structure-and-its-ability-to-functi
@@ -432,8 +439,13 @@
 	\begin{itemize}
 	\item Use 1-D deep convolutional neural network (deep CNN) 
 	\end{itemize}
-
 }
+
+
+
+
+
+
 
 
 
@@ -458,6 +470,32 @@
 		\end{enumerate}
 	\end{itemize}
 }
+
+
+
+
+
+
+
+%	Slide #3
+\frame
+{
+	\frametitle{Proposed Solution(s) - 3}
+	\framesubtitle{Architecture for a 1-D deep CNN}
+
+
+	\begin{figure}[h]
+	\centering 
+	\includegraphics[height=1.5in]{./pics/1-d-cnn-architecture}
+	%\caption{The prediction accuracy at family/superfamily/fold levels for top 1, top 5 and top 10 predictions of DeepSF and PSI-BLAST, on SCOP 1.75 test dataset}
+	\label{fig:1DdeepCNNarch}
+	\end{figure}
+}
+
+
+
+
+
 
 
 
@@ -490,6 +528,29 @@
 %	Experimental Results
 
 \section{Experimental Results}
+
+
+
+%	Slide #1
+\frame
+{
+	\frametitle{Experimental Results - 1}
+	\framesubtitle{Evaluation of distance metrics based on clustering accuracy}
+
+
+	\begin{figure}[h]
+	\centering 
+	\includegraphics[height=1.6in]{./pics/distance-metrics}
+	\caption{The prediction accuracy at family/superfamily/fold levels for top 1, top 5 and top 10 predictions of DeepSF and PSI-BLAST, on SCOP 1.75 test dataset}
+	\label{fig:distancemetrics}
+	\end{figure}
+}
+
+
+
+
+
+
 
 
 %	Slide #1
@@ -540,31 +601,90 @@
 	\centering 
 	\includegraphics[height=2.5in]{./pics/table-3}
 	%\caption{The prediction accuracy at family/superfamily/fold levels for top 1, top 5 and top 10 predictions of DeepSF and PSI-BLAST, on SCOP 1.75 test dataset}
-	\label{fig:Table2}
+	\label{fig:Table3}
 	\end{figure}
 }
 
 
 
 
-
-
-
-
-%	Slide #3
+%	Slide #4
 \frame
 {
-	\frametitle{Experimental Results - 3}
+	\frametitle{Experimental Results - 4}
 	\framesubtitle{How do their proposed solutions compare with existing solutions?}
 
 
 	\begin{figure}[h]
 	\centering 
-	\includegraphics[height=2.2in]{./pics/table-3}
-	\caption{The prediction accuracy at family/superfamily/fold levels for top 1, top 5 and top 10 predictions of DeepSF and PSI-BLAST, on SCOP 1.75 test dataset}
-	\label{fig:Table2}
+	\includegraphics[height=2.5in]{./pics/table-4}
+	%\caption{The prediction accuracy at family/superfamily/fold levels for top 1, top 5 and top 10 predictions of DeepSF and PSI-BLAST, on SCOP 1.75 test dataset}
+	\label{fig:Table4}
 	\end{figure}
 }
+
+
+
+
+
+
+
+%	Slide #5
+\frame
+{
+	\frametitle{Experimental Results - 5}
+	\framesubtitle{How do their proposed solutions compare with existing solutions?}
+
+
+	\begin{figure}[h]
+	\centering 
+	\includegraphics[height=2.5in]{./pics/table-5}
+	%\caption{The prediction accuracy at family/superfamily/fold levels for top 1, top 5 and top 10 predictions of DeepSF and PSI-BLAST, on SCOP 1.75 test dataset}
+	\label{fig:Table5}
+	\end{figure}
+}
+
+
+
+
+
+%	Slide #6
+\frame
+{
+	\frametitle{Experimental Results - 6}
+	\framesubtitle{How do their proposed solutions compare with existing solutions?}
+
+
+	\begin{figure}[h]
+	\centering 
+	\includegraphics[height=2.5in]{./pics/table-6}
+	%\caption{The prediction accuracy at family/superfamily/fold levels for top 1, top 5 and top 10 predictions of DeepSF and PSI-BLAST, on SCOP 1.75 test dataset}
+	\label{fig:Table6}
+	\end{figure}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -662,7 +782,7 @@
 			\item PFP-RFSM (2013, J. Biomedical Science and Engineering); DOI:10.4236/jbise.2013.612145 
 			\end{enumerate}
 		\end{enumerate}
-	\item Did not use box plots to compare methods for each protein sequence in the datasets:
+	\item Did not use box plots or bar charts to compare methods for each protein sequence in the datasets:
 	\end{itemize}
 
 }

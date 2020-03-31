@@ -153,28 +153,28 @@
 
 
 
-%	Table of Contents
-\AtBeginSection[]		% Do nothing for \subsection*
-{
-	\begin{frame}
-%		\frametitle{\textcolor{yellow}{Table of Contents}}
-		\frametitle{Table of Contents}
-%		\textcolor{yellow}{\tableofcontents[currentsection]}
-		\tableofcontents[currentsection,currentsubsection]
-	\end{frame}
-}
-
-\AtBeginSubsection[]		% Do nothing for \subsection*
-{
-\begin{frame}
-\tableofcontents[currentsection,currentsubsection]
-\end{frame}
-}
-
-\section*{Outline}
-\begin{frame}
-\tableofcontents
-\end{frame}
+%	%	Table of Contents
+%	\AtBeginSection[]		% Do nothing for \subsection*
+%	{
+%		\begin{frame}
+%	%		\frametitle{\textcolor{yellow}{Table of Contents}}
+%			\frametitle{Table of Contents}
+%	%		\textcolor{yellow}{\tableofcontents[currentsection]}
+%			\tableofcontents[currentsection,currentsubsection]
+%		\end{frame}
+%	}
+%	
+%	\AtBeginSubsection[]		% Do nothing for \subsection*
+%	{
+%	\begin{frame}
+%	\tableofcontents[currentsection,currentsubsection]
+%	\end{frame}
+%	}
+%	
+%	\section*{Outline}
+%	\begin{frame}
+%	\tableofcontents
+%	\end{frame}
 
 
 
@@ -797,7 +797,7 @@
 	\framesubtitle{What are the weaknesses of this paper?}
 
 	\begin{itemize}
-	\item Inadequate \href{https://blog.apastyle.org/apastyle/tables-and-figures/}{cross-referencing of figures and tables} in the text: 
+	\item Inadequate \href{https://blog.apastyle.org/apastyle/tables-and-figures/}{cross-referencing of figures and tables} with hyperlinks in the text: 
 		%	https://gradschool.utah.edu/thesis/tables-and-figures/
 		%	https://guides.lib.umich.edu/c.php?g=283073&p=1888264
 		%	https://graduate.asu.edu/sites/default/files/chicago-quick-reference_0.pdf
@@ -810,18 +810,30 @@
 		%	http://www.maths.adelaide.edu.au/anthony.roberts/LaTeX/ltxxref.php
 		%	https://en.wikipedia.org/wiki/Cross-reference
 		\begin{enumerate} 
-		\item When figures and tables are not cross referenced in the text, it takes more work to determine the context for each figure and table that I come across. The location of the figures and tables can be placed
-		\item Did not benchmark with other modern solutions for protein fold prediction
-			\begin{enumerate} 
-			\item PFPA (2015, IEEE Transactions on NanoBioscience); DOI: 10.1109/TNB.2015.2450233
-			\item random forest (2014, BMC Bioinformatics); DOI:10.1186/1471-2105-15-S11-S14
-			\item PFP-RFSM (2013, J. Biomedical Science and Engineering); DOI:10.4236/jbise.2013.612145 
-			\end{enumerate}
+		\item When figures and tables are not cross referenced with hyperlinks in the text, it takes more work to determine the context for each figure and table that I come across. The location of the figures and tables can be placed
 		\end{enumerate}
-	\item Did not use box plots or bar charts to compare methods for each protein sequence in the datasets:
+	\item Did not use the following to compare methods (for each protein sequence, or family of protein folds) in the datasets
+		\begin{enumerate} 
+		\item box plots with error bars (or, box-and-whisker plot or box-and-whisker diagram)
+		\item bar charts (normalized to one/unity, using geometric average to avoid bias with respect to the chosen ``golden solution'')
+		\item scatter plots with the $45^{\circ}$ degree reference line
+		\end{enumerate}
 	\end{itemize}
 }
 
+
+
+
+%	Slide #3
+\frame
+{
+	\frametitle{Weaknesses - 3}
+	\framesubtitle{What are the weaknesses of this paper?}
+
+	\begin{itemize}
+	\item Did not do 
+	\end{itemize}
+}
 
 
 
